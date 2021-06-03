@@ -1,0 +1,246 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img_day.jpg');
+    background-size: cover;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    -webkit-tap-highlight-color: transparent !important;
+    position: fixed !important;
+    background-color: black;
+    border-radius: 35px !important;
+    color: white !important;
+    padding: 3.5% !important;
+    opacity: 0.7;
+}
+
+.swiper-number {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background-color: black;
+    border-radius: 35px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px 4%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+}
+
+.swiper-slide {
+    padding-left: 0;
+}
+
+.title {
+    display: table;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    width: auto;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    background-color: white;
+    color: rgb(248, 166, 72);
+    font-size: 120px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid rgb(248, 166, 72);
+    border-radius: 65px;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    padding: 16px 10%;
+    margin-top: 84px;
+    margin-bottom: 150px;
+}
+
+.title-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.all-content {
+    border-top: 15px solid rgb(255, 235, 51);
+    list-style: none;
+    padding-top: 150px;
+    padding-left: 6%;
+}
+
+.number {
+    display: inline;
+    border-radius: 35px;
+    background-color: white;
+    border: 6.5px solid rgb(85, 50, 0);
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    padding: 14px 18px;
+    font-size: 60px;
+    color: rgb(85, 50, 0);
+}
+
+.content {
+    display: block;
+    width: 85%;
+    height: 100%;
+    background-color: white;
+    border: 6.5px solid #2DB400;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    color: #2DB400;
+    border-radius: 35px;
+    font-size: 60px;
+    padding: 14px 18px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+
+}
+
+.menu-flex {
+    display: flex;
+    width: 100%;
+    border-top: 15px solid rgb(255, 235, 51);
+    padding-top: 150px;
+}
+
+.menu-flex1 {
+    flex: 1;
+    width: 300px;
+}
+
+.menu-flex ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu-flex ul li {
+    display: table;
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    text-transform: uppercase;
+    background-position: 1% 50%;
+    transition: all 0.7s ease-out;
+    background-color: white;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    border: none;
+    border: 6.5px solid #2DB400;
+    text-align: center;
+    width: 270px;
+    height: 80px;
+    line-height: 80px;
+    padding: 10px 6%;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 65px;
+}
+
+.menu-flex li:hover {
+    background-color: #2DB400;
+}
+
+.menu-flex a {
+    display: table-cell;
+    text-decoration: none;
+    font-size: 55px;
+    color: #2DB400;
+}
+
+.menu-flex a:hover {
+    color: white;
+}
+
+.menu-text {
+    display: table;
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    text-transform: uppercase;
+    background-position: 1% 50%;
+    transition: all 0.7s ease-out;
+    font-size: 120px;
+    width: auto;
+    height: 180px;
+    line-height: 180px;
+    padding: 16px 10%;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    border: 10px solid rgb(248, 166, 72);
+    box-shadow : 8px 8px 16px rgba(0, 0, 0, 0.45);
+    border-radius: 65px;
+}
+
+.menu-text a,
+.menu-text span {
+    display: table-cell;
+    text-decoration: none;
+    color: rgb(248, 166, 72);
+    font-weight: bold;
+}
+
+.btn {
+    text-align: center;
+}
+
+.color { 
+    -webkit-tap-highlight-color: transparent;
+    background-color: white;
+    border: 6.5px solid rgb(248, 166, 72);
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    border-radius: 60px;
+    font-size: 60px;
+    color: rgb(248, 166, 72);
+    padding: 20px;
+    font-size: 60px;
+    outline: none;
+    width: 85%;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 110%;
+    transition: .3s;
+    background-image: url('img_landscape.jpg');
+    background-size: initial;
+    z-index: 1;
+}
+
+.active {
+    left: 0;
+}
+
+.sidebarBtn {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 100px;
+    transition: .3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
+.sidebarBtnImgae {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.toggle {
+    top: 5px;
+    left: calc(100% - 105px);
+}
