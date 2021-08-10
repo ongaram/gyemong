@@ -1,50 +1,19 @@
-html, body {
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-image: url('img_day.jpg');
-    background-size: cover;
+    background-size: initial;
 }
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    -webkit-tap-highlight-color: transparent !important;
-    position: fixed !important;
-    background-color: black;
-    border-radius: 35px !important;
-    color: white !important;
-    padding: 3.5% !important;
-    opacity: 0.7;
-}
-
-.swiper-number {
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    background-color: black;
-    border-radius: 35px;
-    color: white;
-    font-size: 60px;
-    text-align: center;
-    padding: 10px 4%;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.7;
-}
-
-.swiper-slide {
-    padding-left: 0;
-}
-
+/*제목*/
 .title {
-    display: table;
-    -webkit-tap-highlight-color: transparent;
     list-style: none;
-    width: auto;
+    width: 50%;
     height: 180px;
     line-height: 180px;
     text-align: center;
@@ -58,33 +27,32 @@ html, body {
     border-radius: 65px;
     box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
     padding: 16px 10%;
-    margin-top: 84px;
-    margin-bottom: 150px;
+    margin-top: 75px;
+    margin-bottom: 225px;
 }
 
-.title-text {
-    display: table-cell;
-    vertical-align: middle;
-}
-
+/*원문, 해설, 부연설명 전체*/
 .all-content {
     border-top: 15px solid rgb(255, 235, 51);
     list-style: none;
     padding-top: 150px;
-    padding-left: 6%;
 }
 
+/*번호*/
 .number {
-    display: inline;
+    margin-top: 100px;
+    display: inline-block;
     border-radius: 35px;
     background-color: white;
-    border: 6.5px solid rgb(85, 50, 0);
+    border: 6.5px solid #C12DFF;
     box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
     padding: 14px 18px;
     font-size: 60px;
     color: rgb(85, 50, 0);
+    margin-left: 50px;
 }
 
+/*내용 (초록색)*/
 .content {
     display: block;
     width: 85%;
@@ -96,42 +64,198 @@ html, body {
     border-radius: 35px;
     font-size: 60px;
     padding: 14px 18px;
-    margin-top: 60px;
-    margin-bottom: 120px;
-
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
+/*내용 (빨간색)*/
+.red {
+    display: block;
+    width: 85%;
+    height: 100%;
+    background-color: white;
+    border: 6.5px solid #CD2E57;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    color: #CD2E57;
+    border-radius: 35px;
+    font-size: 60px;
+    padding: 14px 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+/*주간 야간 모드*/
+/*함수 호출 버튼*/
+.handlerBtn {
+    position: absolute;
+    top: 10px;
+    left: calc(100% - 145px);
+    transition: .3s;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*함수 호출 버튼 숨기기 (사이드바 펼쳐진 상태일 때)*/
+.hide {
+    display: none;
+}
+
+/*전구 이미지*/
+.color {
+    margin-top: 360px;
+    width: 125px;
+    height: 125px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*사이드바*/
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.sidebarAll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1750%;
+    background-image: url('img_landscape.jpg');
+    background-size: initial;
+}
+
+.active {
+    left: 0;
+}
+
+.sidebarBtn {
+    z-index: 1;
+    position: absolute;
+    top: 400px;
+    right: -100px;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.right {
+    right: 0;
+}
+
+.sidebarBtn span {
+    display: block;
+    width: 70px;
+    height: 6px;
+    background-color: white;
+    position: absolute;
+    top: 48px;
+    left: 15px;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.sidebarBtn span:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.sidebarBtn span:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.sidebarBtn.toggle span {
+    background-color: transparent;
+}
+
+.sidebarBtn.toggle span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.sidebarBtn.toggle span:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/*목록 (사이드바 안)*/
+/*목록 제목*/
+.menuTitle {
+    list-style: none;
+    width: 70%;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    background-color: white;
+    color: rgb(248, 166, 72);
+    font-size: 100px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid rgb(248, 166, 72);
+    border-radius: 65px;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    padding: 16px 10%;
+    margin-top: 75px;
+    margin-bottom: 225px;
+}
+
+/*목록 세로를 기준으로 나누기 (flex 속성 도입)*/
 .menu-flex {
     display: flex;
     width: 100%;
     border-top: 15px solid rgb(255, 235, 51);
     padding-top: 150px;
+    padding-bottom: 150px;
 }
 
-.menu-flex1 {
+/*목록 세로를 기준으로 나누기 (flex 속성 사용)*/
+.menu-flex ul {
     flex: 1;
     width: 300px;
-}
-
-.menu-flex ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.menu-flex ul li {
-    display: table;
+/*목록 (접고 펼치는) 선택 버튼*/
+.btn {
+    position: relative;
+    display: block;
     -webkit-tap-highlight-color: transparent;
-    background: transparent;
-    text-transform: uppercase;
-    background-position: 1% 50%;
-    transition: all 0.7s ease-out;
     background-color: white;
     box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
     border: none;
     border: 6.5px solid #2DB400;
     text-align: center;
-    width: 270px;
+    width: 300px;
     height: 80px;
     line-height: 80px;
     padding: 10px 6%;
@@ -141,106 +265,53 @@ html, body {
     border-radius: 65px;
 }
 
-.menu-flex li:hover {
-    background-color: #2DB400;
-}
-
-.menu-flex a {
-    display: table-cell;
-    text-decoration: none;
-    font-size: 55px;
+/*목록 (접고 펼치는) 선택 버튼 글자*/
+.menu-flex ul .btn span {
+    font-size: 54px;
     color: #2DB400;
 }
 
-.menu-flex a:hover {
-    color: white;
+/*목록 (접고 펼치는) 내용 전체*/
+.menu-flex .smallContents {
+    display: none;
 }
 
-.menu-text {
-    display: table;
+/*목록 (접고 펼치는) 내용 전체 버튼*/
+.menu-flex .smallContents li {
+    display: block;
     -webkit-tap-highlight-color: transparent;
-    background: transparent;
-    text-transform: uppercase;
-    background-position: 1% 50%;
-    transition: all 0.7s ease-out;
-    font-size: 120px;
-    width: auto;
-    height: 180px;
-    line-height: 180px;
-    padding: 16px 10%;
-    margin-top: 100px;
-    margin-bottom: 150px;
+    background-color: white;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    border: none;
+    border: 6.5px solid #2DB400;
+    text-align: center;
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+    padding: 10px 6%;
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    background-color: white;
-    border: 10px solid rgb(248, 166, 72);
-    box-shadow : 8px 8px 16px rgba(0, 0, 0, 0.45);
     border-radius: 65px;
 }
 
-.menu-text a,
-.menu-text span {
-    display: table-cell;
+/*목록 (접고 펼치는) 내용 전체 버튼 글자*/
+.menu-flex .smallContents li a {
     text-decoration: none;
-    color: rgb(248, 166, 72);
-    font-weight: bold;
+    font-size: 50px;
+    color: #2DB400;
 }
 
-.btn {
-    text-align: center;
-}
-
-.color { 
-    -webkit-tap-highlight-color: transparent;
-    background-color: white;
-    border: 6.5px solid rgb(248, 166, 72);
-    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
-    border-radius: 60px;
-    font-size: 60px;
-    color: rgb(248, 166, 72);
-    padding: 20px;
-    font-size: 60px;
-    outline: none;
-    width: 85%;
-}
-
-.sidebar {
-    position: fixed;
-    background-color: white;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 110%;
+.sidebarBtn2 {
+    position: absolute;
+    top: 400px;
+    left: 10px;
     transition: .3s;
-    background-image: url('img_landscape.jpg');
-    background-size: initial;
-    z-index: 1;
-}
-
-.active {
-    left: 0;
-}
-
-.sidebarBtn {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    width: 100px;
-    height: 100px;
-    transition: .3s;
-    box-sizing: border-box;
-    cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: none;
 }
 
-.sidebarBtnImgae {
+.sidebarBtnImgae2 {
     -webkit-tap-highlight-color: transparent;
-}
-
-.toggle {
-    top: 5px;
-    left: calc(100% - 105px);
 }

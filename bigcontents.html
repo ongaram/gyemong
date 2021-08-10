@@ -5,16 +5,138 @@
     <meta charset="UTF-8">
     <title>계몽편</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('img_fantacy.jpg');
+            background-size: 300%;
+            margin: 0;
+        }
 
-    <script defer="defer" src="main.js"></script>
+        .menu-flex {
+            display: flex;
+            width: 100%;
+            border-top: 15px solid rgb(255, 235, 51);
+            padding-top: 150px;
+        }
+
+        .menu-flex1 {
+            flex: 1;
+            width: 300px;
+            animation-duration: 4s;
+            animation-name: slidein;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-top: 100%;
+            }
+
+            to {
+                margin-bottom: 0%;
+            }
+        }
+
+        .menu-flex ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .menu-flex ul li {
+            display: table;
+            -webkit-tap-highlight-color: transparent;
+            background: transparent;
+            text-transform: uppercase;
+            background-position: 1% 50%;
+            transition: all 0.7s ease-out;
+            background-color: rgba(255, 255, 255, 0.75);
+            box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+            border: none;
+            border: 6.5px solid #2DB400;
+            text-align: center;
+            width: 450px;
+            height: 180px;
+            line-height: 180px;
+            padding: 10px 6%;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 65px;
+        }
+
+        .menu-flex ul li:first-child {
+            margin-top: 50px;
+            margin-bottom: 200px;
+        }
+
+        .menu-flex li:hover {
+            background-color: #2DB400;
+        }
+
+        .menu-flex a {
+            display: table-cell;
+            text-decoration: none;
+            font-size: 75px;
+            font-weight: bolder;
+            color: #2DB400;
+        }
+
+        .menu-flex a:hover {
+            color: white;
+        }
+
+        .menu-text {
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+            font-size: 100px;
+            width: 70%;
+            height: 180px;
+            line-height: 180px;
+            padding: 16px 10%;
+            margin-top: 75px;
+            margin-bottom: 225px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            background-color: white;
+            border: 10px solid rgb(248, 166, 72);
+            box-shadow : 8px 8px 16px rgba(0, 0, 0, 0.45);
+            border-radius: 65px;
+            text-decoration: none;
+            color: rgb(248, 166, 72);
+            font-weight: bold;
+        }
+
+        .sidebarBtn2 {
+            position: fixed;
+            top: 400px;
+            left: 10px;
+            width: 125px;
+            height: 125px;
+            transition: .3s;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+        }
+
+        .sidebarBtnImgae2 {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
 
 </head>
 
 <body>
 
     <div class="menu">
-        <p class="menu-text"><a href="index.html">계 몽 편</a></p>
+        <button class="sidebarBtn2">
+            <a href="index.html">
+                <img class="sidebarBtnImage2" src="backButton.svg">
+            </a>
+        </button>
+        <p class="menu-text">계 몽 편</p>
     </div>
 
     <div class="menu-flex">
@@ -22,15 +144,12 @@
         <div class="menu-flex1">
 
             <ul>
-                <li><a href="smallcontents1.html">1. 수편</a></li>
-                <li><a href="smallcontents2.html">2. 천편</a></li>
-                <li><a href="smallcontents3.html">3. 지편</a></li>
-                <li><a href="smallcontents4.html">4. 물편</a></li>
-                <li><a href="smallcontents5.html">5. 인편</a></li>
+                <li><a href="introduce.html">머리말</a></li>
+                <li><a href="allcontents.html">바로가기</a></li>
             </ul>
             
         </div>
-    
+
     </div>
 
 </body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>계몽편</title>
+
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            background-image: url('img_landscape.jpg');
+            background-size: initial;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*목록 (사이드바 안)*/
+        /*목록 제목*/
+        .menuTitle {
+            list-style: none;
+            width: 70%;
+            height: 180px;
+            line-height: 180px;
+            text-align: center;
+            background-color: white;
+            color: rgb(248, 166, 72);
+            font-size: 100px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-right: auto;
+            border: 10px solid rgb(248, 166, 72);
+            border-radius: 65px;
+            box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+            padding: 16px 10%;
+            margin-top: 150px;
+            margin-top: 75px;
+            margin-bottom: 225px;
+        }
+
+        /*목록 세로를 기준으로 나누기 (flex 속성 도입)*/
+        .menu-flex {
+            display: flex;
+            width: 100%;
+            border-top: 15px solid rgb(255, 235, 51);
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        /*목록 세로를 기준으로 나누기 (flex 속성 사용)*/
+        .menu-flex ul {
+            flex: 1;
+            width: 300px;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        /*목록 (접고 펼치는) 선택 버튼*/
+        .btn {
+            position: relative;
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+            background-color: white;
+            box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+            border: none;
+            border: 6.5px solid #2DB400;
+            text-align: center;
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            padding: 10px 6%;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 65px;
+        }
+
+        /*목록 (접고 펼치는) 선택 버튼 글자*/
+        .menu-flex ul .btn span {
+            font-size: 54px;
+            color: #2DB400;
+        }
+
+        /*목록 (접고 펼치는) 내용 전체*/
+        .menu-flex .smallContents {
+            display: none;
+        }
+
+        /*목록 (접고 펼치는) 내용 전체 버튼*/
+        .menu-flex .smallContents li {
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+            background-color: white;
+            box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+            border: none;
+            border: 6.5px solid #2DB400;
+            text-align: center;
+            width: 250px;
+            height: 80px;
+            line-height: 80px;
+            padding: 10px 6%;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 65px;
+        }
+
+        /*목록 (접고 펼치는) 내용 전체 버튼 글자*/
+        .menu-flex .smallContents li a {
+            text-decoration: none;
+            font-size: 50px;
+            color: #2DB400;
+        }
+
+        .sidebarBtn2 {
+            position: absolute;
+            top: 400px;
+            left: 10px;
+            transition: .3s;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+        }
+
+        .sidebarBtnImgae2 {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script defer src="showhide.js"></script>
+
+</head>
+
+<body>
+
+    <button class="sidebarBtn2">
+        <a href="bigcontents.html">
+            <img class="sidebarBtnImage2" src="backButton.svg" style="width: 125px; height: 125px;">
+        </a>
+    </button>
+
+    <div class="menuTitle">계 몽 편</div>
+        
+    <div class="menu-flex">
+
+        <ul>
+            <li class="btn"><span>1. 수편</span></li>
+                <div class="smallContents">
+                    <li><a href="chido1-1.html">원문</a></li>
+                    <li><a href="chido1-2.html">해설</a></li>
+                </div>
+
+            <li class="btn"><span>2. 천편</span></li>
+                <div class="smallContents">
+                    <li><a href="chido2-1.html">원문</a></li>
+                    <li><a href="chido2-2.html">해설</a></li>
+                </div>
+
+            <li class="btn"><span>3. 지편</span></li>
+                <div class="smallContents">
+                    <li><a href="chido3-1.html">원문</a></li>
+                    <li><a href="chido3-2.html">해설</a></li>
+                </div>
+
+            <li class="btn"><span>4. 물편</span></li>
+                <div class="smallContents">
+                    <li><a href="chido4-1.html">원문</a></li>
+                    <li><a href="chido4-2.html">해설</a></li>
+                </div>
+
+            <li class="btn"><span>5. 인편</span></li>
+                <div class="smallContents">
+                    <li><a href="chido5-1.html">원문</a></li>
+                    <li><a href="chido5-2.html">해설</a></li>
+                </div>
+
+        </ul>
+            
+    </div>
+
+</body>
+
+</html>
