@@ -209,7 +209,7 @@ body {
 /*목록 제목*/
 .menuTitle {
     list-style: none;
-    width: 70%;
+    width: 50%;
     height: 180px;
     line-height: 180px;
     text-align: center;
@@ -313,5 +313,23 @@ body {
 }
 
 .sidebarBtnImgae2 {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sidebarBtn3 {
+    display: block;
+    background-color: gold;
+    border: 10px solid black;
+    border-radius: 65px;
+    box-shadow : 10px 10px 16px rgba(0, 0, 0, 0.45);
+    padding: 50px 150px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+}
+
+.sidebarBtnImgae3 {
     -webkit-tap-highlight-color: transparent;
 }
